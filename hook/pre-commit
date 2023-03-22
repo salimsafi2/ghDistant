@@ -1,0 +1,9 @@
+#!/bin/bash
+
+read -p "Créer un fichier de vérification de commit (y/[n]) ?" yn < /dev/tty
+yn=${yn:-n}
+if [[ $yn =~ ^[Yy]$ ]]
+then
+  echo "commit vérifié le $(date +'%d/%m/%Y %H:%M:%S')" > suivi/commitInfo.txt
+  git add suivi/commitInfo.txt
+fi
