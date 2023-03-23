@@ -8,8 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="conteneur">
+    <div class="conteneur" style="flex-direction: column; width: 600px;">
         <h1>Hello Everybody !</h1>
+        <p id="demo" style="color: yellow; font-weight: bold;"></p>
+
+        <script>
+            const d = new Date();
+            const day = d.getDate();
+            const month = d.getMonth() + 1;
+            const year = d.getFullYear();
+            const formattedDate = `${day}/${month}/${year}`;
+            document.getElementById("demo").innerHTML = formattedDate;
+          </script>          
     </div>
 </body>
 </html>
